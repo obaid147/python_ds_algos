@@ -1,22 +1,20 @@
-#               Method1
-#       Time complexity --> O(n) ; aux-space --> O(index)
+
 
 #               Method2
 #       Time complexity --> O(n*n)
-
-
-def Method2(array, rotateBy):
+def method2(array, rotateBy):
     for i in range(rotateBy):
-        Rotate2(array)
+        rotate2(array)
 
 
-def Rotate2(array):
+def rotate2(array):
     temp = array[0]
     for i in range(len(array)-1):
         array[i] = array[i+1]
     array[-1] = temp
 
-
+#               Method1
+#       Time complexity --> O(n) ; aux-space --> O(rotateby) --> O(no of rotations.)
 def Method1(arr, rotateBy):
     newArray = []
     for i in range(len(arr)):
