@@ -1,5 +1,5 @@
 #               Method1
-#           Time complexity --> O(n) ; aux-space O(n)
+#           Time complexity --> complexity of sorting algorithm we use i.e if merge sort then, O(nlogn)
 
 #               Method2
 #           Time complexity --> O(n) ;
@@ -18,7 +18,7 @@ def Method1(array, num):
             length -= 1
     return -1, -1
 
-
+#TC: O(n), aux:space->hashset so, O(n)
 def Method2(array, arr_size, num):
     set1 = set()
     for i in range(arr_size):
