@@ -240,6 +240,6 @@ five.next = ll.head
 # delfirst
 # delByData
 print()
+
 print(ll.CycleDetectionUsingSet())
-print()
 print(ll.CycleDetectionFlyodAlgo())

@@ -1,8 +1,8 @@
 #               Method1
-#       Time complexity --> O(n*n) ; aux-space --> O(d)
+#       Time complexity --> O(n*n) ; aux-space --> O(n)
 
 #               Method2
-#       Time complexity --> O(n) ; aux-space --> O(d)
+#       Time complexity --> O(n) ; aux-space --> O(n)
 
 
 def Method1(array, size, checkerArray):
