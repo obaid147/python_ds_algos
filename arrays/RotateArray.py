@@ -1,43 +1,34 @@
-def leftRotateMethod3(array, rotateBy):
-    rotate1(array)
-    rotate2(array)
-    pass
+#               Method1
+#       Time complexity --> O(n) ; aux-space --> O(index)
+
+#               Method2
+#       Time complexity --> O(n*n)
 
 
-def rotate1(array, n):
-    array[0], array[1]
-
-def rotate2(array):
-    # for i in range(n+1, len(array)):
-    array.reverse()
+def Method2(array, rotateBy):
+    for i in range(rotateBy):
+        Rotate2(array)
 
 
-# def leftRotateSecMethod(array, rotateBy):
-#     for i in range(rotateBy):
-#         Rotate(array)
-#
-#
-# def Rotate(array):
-#     temp = array[0]
-#     for i in range(len(array)-1):
-#         array[i] = array[i+1]
-#     array[-1] = temp
-#
-#
-# def leftRotateFirstMethod(arr, rotateBy):
-#     newArray = []
-#     # Time complexity: O(n)
-#     # Space complexity: O(rotateBy)
-#     for i in range(len(arr)):
-#         if i < rotateBy:
-#             newArray.append(arr[i])
-#         else:
-#             arr[i - rotateBy] = arr[i]
-#
-#     for i in range(rotateBy):
-#         if rotateBy == 7:
-#             break
-#         arr[len(arr) - (rotateBy - i)] = newArray[i]
+def Rotate2(array):
+    temp = array[0]
+    for i in range(len(array)-1):
+        array[i] = array[i+1]
+    array[-1] = temp
+
+
+def Method1(arr, rotateBy):
+    newArray = []
+    for i in range(len(arr)):
+        if i < rotateBy:
+            newArray.append(arr[i])
+        else:
+            arr[i - rotateBy] = arr[i]
+
+    for i in range(rotateBy):
+        if rotateBy == 7:
+            break
+        arr[len(arr) - (rotateBy - i)] = newArray[i]
 
 
 while True:
@@ -50,7 +41,8 @@ while True:
         if n == 0:
             print("Exiting.....")
             exit(1)
-        leftRotateMethod3(array, n)
+        Method1(array, n)
+        Method2(array, n)
         print("After Rotation", array)
         print("----------------------")
     except ValueError:

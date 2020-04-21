@@ -1,4 +1,11 @@
-def count1(array, size, checkerArray):
+#               Method1
+#       Time complexity --> O(n*n) ; aux-space --> O(d)
+
+#               Method2
+#       Time complexity --> O(n) ; aux-space --> O(d)
+
+
+def Method1(array, size, checkerArray):
     for i in range(size):
         count = 1
         if checkerArray[i]:
@@ -10,7 +17,7 @@ def count1(array, size, checkerArray):
         print(array[i], '->', count)
 
 
-def count_dict(arr, n):
+def Method2(arr, n):
     mp = dict()
     for i in range(n):
         if arr[i] in mp.keys():
@@ -25,5 +32,5 @@ def count_dict(arr, n):
 arr = [4, 2, 6, 1, 4, 1, 6]
 checker = [False, False, False, False, False, False, False]
 n = len(arr)
-count1(arr, n, checker)
-count_dict(arr, n)
+Method1(arr, n, checker)
+Method2(arr, n)

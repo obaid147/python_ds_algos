@@ -9,20 +9,6 @@ class SinglyLinkedList:
     def __init__(self):
         self.head = None
 
-# append(data)
-# prepend(data)
-# insertAfterIndex(index, data)
-# insertAfterNode(prev_Node, data)
-# delFirst()
-# delByData(data)
-# delDataByIndex(index)
-# SearchByIndex(index)
-# delLast()
-# del_index(index)
-# reverseLinkedList()
-# CycleDetectionUsingSet()
-# CycleDetectionFlyodAlgo()
-
     # O(n*d)
     def CycleDetectionUsingSet(self):
         set1 = set()
