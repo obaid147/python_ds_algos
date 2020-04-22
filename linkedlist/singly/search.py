@@ -24,6 +24,19 @@ class SinglyLinkedList:
             temp = temp.next
             i += 1
 
+    def searchByData(self, Data):
+        temp = self.head
+        if temp is not None:
+            if temp.data == Data:
+                return True
+        while temp is not None:
+            if temp.data == Data:
+                return True
+            temp = temp.next
+        if temp is None:
+            return
+        return False
+
 
 ll = SinglyLinkedList()
 ll.head = Node(1)
@@ -31,3 +44,4 @@ second = Node(2)
 third = Node(3)
 ll.head.next = second
 second.next = third
+print(ll.searchByData(100))

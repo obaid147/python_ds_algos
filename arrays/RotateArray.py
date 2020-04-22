@@ -1,7 +1,7 @@
-
-
 #               Method2
-#       Time complexity --> O(n*n)
+#       Time complexity --> O(n*rotateBy)
+
+
 def method2(array, rotateBy):
     for i in range(rotateBy):
         rotate2(array)
@@ -15,7 +15,7 @@ def rotate2(array):
 
 #               Method1
 #       Time complexity --> O(n) ; aux-space --> O(rotateby) --> O(no of rotations.)
-def Method1(arr, rotateBy):
+def method1(arr, rotateBy):
     newArray = []
     for i in range(len(arr)):
         if i < rotateBy:
@@ -39,8 +39,8 @@ while True:
         if n == 0:
             print("Exiting.....")
             exit(1)
-        Method1(array, n)
-        Method2(array, n)
+        method1(array, n)
+        method2(array, n)
         print("After Rotation", array)
         print("----------------------")
     except ValueError:
