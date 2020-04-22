@@ -46,6 +46,7 @@ class SinglyLinkedList:
             nextNode = self.head.next
             self.head.next = temp
             self.head = nextNode
+        return False
 
 
 ll = SinglyLinkedList()

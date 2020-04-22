@@ -5,7 +5,6 @@ def reverseArray(array, start, end):
         array[end] = temp
         start += 1
         end -= 1
-    return
 
 
 def method3(array, d):
@@ -15,7 +14,6 @@ def method3(array, d):
     reverseArray(array, 0, d - 1)
     reverseArray(array, d, n - 1)
     reverseArray(array, 0, n - 1)
-    return array
 
 
 #               Method2
@@ -48,27 +46,8 @@ def method1(arr, rotateBy):
         arr[len(arr) - (rotateBy - i)] = newArray[i]
 
 
-while True:
-
-    # use regex to validate if its a number
-    array = [1, 2, 3, 4, 5, 6, 7]
-    n = int(input("Enter indices to rotate: "))
-    print("Current array ", array)
-    method3(array, n)
-    print('Rotated Array', array)
-    break
-    # print("Press 0 for EXIT")
-    # try:
-    #     n = int(input("Enter indices to rotate: "))
-    #     if n == 0:
-    #         print("Exiting.....")
-    #         exit(1)
-    #     # Call Method Here
-
-    #     # method1(array, n)
-    #     print("After Rotation", array)
-    #     print("----------------------")
-    # except ValueError:
-    #     print("Enter a Number")
-    # except IndexError:
-    #     print("Enter a valid Number")
+array = [1, 2, 3, 4, 5, 6, 7]
+n = int(input("Enter indices to rotate: "))
+print("Current array ", array)
+method3(array, n)
+print('Rotated Array', array)
