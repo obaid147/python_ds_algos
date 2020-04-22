@@ -5,24 +5,30 @@ class Node:
 
 
 class SinglyLinkedList:
-    # O(1)
+    def __init__(self):
+        self.head = None
+
+    # Time Complexity --> O(1)
+    # Space Complexity --> O()
     def prepend(self, data):
         new_node = Node(data)
         new_node.next = self.head
         self.head = new_node
 
-    # O(n)
+    # Time Complexity --> O(n)
+    # Space Complexity --> O()
     def append(self, data):
         new_node = Node(data)
         if self.head is None:
             self.head = new_node
             return
-
         temp = self.head
         while temp.next:
             temp = temp.next
         temp.next = new_node
 
+    # Time Complexity --> O(n)
+    # Space Complexity --> O()
     def insertAfterIndex(self, index, data):
         global x
         new_node = Node(data)
@@ -43,6 +49,8 @@ class SinglyLinkedList:
                 print(index, "Index not found")
                 return
 
+    # Time Complexity --> O(1)
+    # Space Complexity --> O()
     def insertAfter(self, prev_node, data):
         new_node = Node(data)
         if prev_node is None:

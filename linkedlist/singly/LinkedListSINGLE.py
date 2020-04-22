@@ -226,6 +226,7 @@ second.next = third
 third.next = four
 four.next = five
 five.next = ll.head
+ll.SearchByIndex(1)
 # ll.printList()
 # print()
 # ll.delete_index(6)
@@ -240,6 +241,7 @@ five.next = ll.head
 # delfirst
 # delByData
 print()
+
 
 print(ll.CycleDetectionUsingSet())
 print(ll.CycleDetectionFlyodAlgo())
