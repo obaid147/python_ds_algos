@@ -33,6 +33,20 @@ class SinglyLinkedList:
                 return True
         return False
 
+    # Time Complexity --> O(n)
+    def CycleDetectionTemp(self):
+        if not self.head:
+            return None
+        temp, temp.next = Node(100), None
+        while self.head is not None:
+            if self.head.next is None:
+                return False
+            if self.head.next is temp:
+                return True
+            nextNode = self.head.next
+            self.head.next = temp
+            self.head = nextNode
+
 
 ll = SinglyLinkedList()
 ll.head = Node(1)
@@ -44,6 +58,7 @@ ll.head.next = second
 second.next = third
 third.next = four
 four.next = five
-five.next = None
+five.next = third
 # print(ll.CycleDetectionUsingSet())
-print(ll.CycleDetectionFlyodAlgo())
+# print(ll.CycleDetectionFlyodAlgo())
+print(ll.CycleDetectionTemp())
