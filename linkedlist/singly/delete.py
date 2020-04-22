@@ -9,7 +9,6 @@ class SinglyLinkedList:
         self.head = None
 
     # Time Complexity --> O(n)
-    # Space Complexity --> O()
     def deleteLast(self):
         if self.head is None:
             return None
@@ -23,7 +22,6 @@ class SinglyLinkedList:
         return
 
     # Time Complexity --> O(n)
-    # Space Complexity --> O()
     def delete_index(self, index):
         if self.head is None:
             return
@@ -45,7 +43,6 @@ class SinglyLinkedList:
         temp.next = next
 
     # Time Complexity --> O(1)
-    # Space Complexity --> O()
     def delFirst(self):
         if not self.head:
             return
@@ -57,7 +54,6 @@ class SinglyLinkedList:
             return
 
     # Time Complexity --> O(n)
-    # Space Complexity --> O()
     def deleteNode(self, key):
         temp = self.head
         prev = None

@@ -9,7 +9,6 @@ class SinglyLinkedList:
         self.head = None
 
     # Time Complexity --> O(n*d);
-    # Space Complexity -->O()
     def CycleDetectionUsingSet(self):
         set1 = set()
         temp = self.head
@@ -22,7 +21,6 @@ class SinglyLinkedList:
         return False
 
     # Time Complexity --> O(n)
-    # Space Complexity -->O()
     def CycleDetectionFlyodAlgo(self):
         if not self.head:
             return None
