@@ -8,12 +8,12 @@ class SinglyLinkedList:
     def __init__(self):
         self.head = None
 
-    # Time Complexity --> O(n*d);
+    # Time Complexity --> O(n);
     def CycleDetectionUsingSet(self):
         set1 = set()
         temp = self.head
         while temp:
-            if temp.next in set1:
+            if temp in set1:
                 return True
             else:
                 set1.add(temp)
@@ -26,7 +26,7 @@ class SinglyLinkedList:
             return None
         tut = self.head
         rab = self.head
-        while rab.next is not None and rab is not None or tut is not None:
+        while rab.next and rab and tut.next:
             tut = tut.next
             rab = rab.next.next
             if id(tut) == id(rab):
@@ -45,5 +45,5 @@ second.next = third
 third.next = four
 four.next = five
 five.next = None
-print(ll.CycleDetectionUsingSet())
+# print(ll.CycleDetectionUsingSet())
 print(ll.CycleDetectionFlyodAlgo())
