@@ -1,8 +1,9 @@
-def method1(bigNum, smallNum):
-    while smallNum:
-        bigNum = smallNum
-        smallNum = bigNum % smallNum
-    print('GCD =', bigNum)
+def computeGCD(n1, n2):
+    while n2:
+        n1 = n2
+        n2 = n1 % n2
+
+    return n1
 
 
-method1(6, 2)
+print("GCD = ", computeGCD(6, 2))
