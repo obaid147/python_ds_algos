@@ -18,20 +18,27 @@ def Method1(array, num):
             length -= 1
     return -1, -1
 
-#TC: O(n), aux:space->hashset so, O(n)
-def Method2(array, arr_size, num):
+
+# TC: O(n), aux:space->hashset so, O(n)
+def Method2(array, arr_size, sum):
     set1 = set()
     for i in range(arr_size):
-        element = num - array[i]
+        element = sum - array[i]
         if element in set1:
             return array[i], element
         set1.add(array[i])
     return -1
 
+#
+# arrayElements2 = [1, 6, 3, 9, 4]
+# n = 10
+# print(Method1(arrayElements2, n))
+# n = 16
+# arrayElements1 = [1, 4, 45, 6, 10, 8]
+# print(Method2(arrayElements1, len(arrayElements1), n))
 
-arrayElements2 = [1, 6, 3, 9, 4]
-n = 10
-print(Method1(arrayElements2, n))
-n = 16
-arrayElements1 = [1, 4, 45, 6, 10, 8]
-print(Method2(arrayElements1, len(arrayElements1), n))
+n = 123
+length = len(n)
+print(length)
+size = 0
+digits = []

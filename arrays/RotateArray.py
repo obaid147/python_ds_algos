@@ -46,8 +46,18 @@ def method1(arr, rotateBy):
         arr[len(arr) - (rotateBy - i)] = newArray[i]
 
 
+def juggling(array, d):
+    for i in range(d):
+        temp = array[0]
+        j = i
+        k = d + j
+        array[j] = array[k]
+
+
+
 array = [1, 2, 3, 4, 5, 6, 7]
 n = int(input("Enter indices to rotate: "))
 print("Current array ", array)
-method3(array, n)
+# method3(array, n)
+juggling(array, n)
 print('Rotated Array', array)
