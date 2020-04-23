@@ -1,4 +1,4 @@
-array = [1, 2, 3, 3, 2, 1]
+array = [1, 2, 3, 4, 2, 1]
 i = 0
 j = len(array) - 1
 flag = False
