@@ -18,4 +18,4 @@ def method2(n1, n2):
         return method2(n2, n1 % n2)
 
 
-print(method1(21, 13))
+print(method2(6, 2))

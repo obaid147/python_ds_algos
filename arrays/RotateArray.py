@@ -46,18 +46,51 @@ def method1(arr, rotateBy):
         arr[len(arr) - (rotateBy - i)] = newArray[i]
 
 
-def juggling(array, d):
-    for i in range(d):
-        temp = array[0]
+def gdc(n1, n2):
+    if not n2:
+        return n1
+    else:
+        return gdc(n2, n1 % n2)
+
+
+def jugglingMethod1(n, d, array):
+    for i in range(gdc(n, d)):
+        temp = array[i]
         j = i
-        k = d + j
-        array[j] = array[k]
+        while True:
+            k = j + d
+            if k >= n:
+                k = k - n
+            if k == i:
+                break
+            array[j] = array[k]
+            j = k
+        array[j] = temp
 
 
+def jugglingMethod2(n, d, array):
+    GCD = gdc(n, d)
+    for i in range(GCD):
+        temp = array[i]
+        j = i
+        while True:
+            k = (j + d) % n
+            if k == i:
+                break
+            array[j] = array[k]
+            j = k
+        array[j] = temp
 
-array = [1, 2, 3, 4, 5, 6, 7]
-n = int(input("Enter indices to rotate: "))
-print("Current array ", array)
-# method3(array, n)
-juggling(array, n)
-print('Rotated Array', array)
+
+array1 = [1, 2, 3, 4, 5, 6]
+array2 = [1, 2, 3, 4, 5]
+size = len(array2)
+num = int(input("Enter indices to rotate: "))
+if num > size:
+    print("Index Error")
+    exit(1)
+
+print("Current array ", array2)
+# jugglingMethod1(size, num, array)
+jugglingMethod2(size, num, array2)
+print('Rotated Array', array2)

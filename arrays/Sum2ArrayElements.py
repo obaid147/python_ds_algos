@@ -1,8 +1,5 @@
-#               Method1
-#           Time complexity --> complexity of sorting algorithm we use i.e if merge sort then, O(nlogn)
-
-#               Method2
-#           Time complexity --> O(n) ;
+# time complex : sorting + Method's
+# ie: if merge sort used TIME COMPLEXITY = O(nlogn)
 
 
 def Method1(array, num):
@@ -29,16 +26,10 @@ def Method2(array, arr_size, sum):
         set1.add(array[i])
     return -1
 
-#
-# arrayElements2 = [1, 6, 3, 9, 4]
-# n = 10
-# print(Method1(arrayElements2, n))
-# n = 16
-# arrayElements1 = [1, 4, 45, 6, 10, 8]
-# print(Method2(arrayElements1, len(arrayElements1), n))
 
-n = 123
-length = len(n)
-print(length)
-size = 0
-digits = []
+arrayElements2 = [1, 6, 3, 9, 4]
+n = 10
+print(Method1(arrayElements2, n))
+n = 16
+arrayElements1 = [1, 4, 45, 6, 10, 8]
+print(Method2(arrayElements1, len(arrayElements1), n))
