@@ -22,4 +22,4 @@ second = Node(2)
 third = Node(3)
 ll.head.next = second
 second.next = third
-ll.countNodes(ll.head)
+print(ll.countNodes(ll.head))
