@@ -2,7 +2,7 @@
 def method1(s, decimal):
     while decimal > 0:
         rem = decimal % 2
-        s = s
+        s = str(rem) + s
         decimal //= 2
         print(int(rem), end='')
 
