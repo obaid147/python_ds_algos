@@ -4,7 +4,7 @@ def method1(s, decimal):
         rem = decimal % 2
         s = str(rem) + s
         decimal //= 2
-        print(int(rem), end='')
+    return s
 
 
 # Recursive:
@@ -19,6 +19,5 @@ def method2(s, num):
 
 if __name__ == '__main__':
     decimal = int(input("Enter a Positive Decimal Number: "))
-    # method1("", decimal)
-    binary = method2("", decimal)
+    binary = method1("", decimal)
     print("binary: ", binary)
