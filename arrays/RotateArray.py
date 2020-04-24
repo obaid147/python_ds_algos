@@ -7,6 +7,7 @@ def reverseArray(array, start, end):
         end -= 1
 
 
+# Time Complexity O(n)
 def method3(array, d):
     if d == 0:
         return
@@ -53,6 +54,7 @@ def gdc(n1, n2):
         return gdc(n2, n1 % n2)
 
 
+# Time Complexity O(n)
 def jugglingMethod1(n, d, array):
     for i in range(gdc(n, d)):
         temp = array[i]
@@ -68,6 +70,7 @@ def jugglingMethod1(n, d, array):
         array[j] = temp
 
 
+# Time Complexity O(n)
 def jugglingMethod2(n, d, array):
     for i in range(gdc(n, d)):
         temp = array[i]

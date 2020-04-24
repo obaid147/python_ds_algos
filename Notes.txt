@@ -1,0 +1,2 @@
+1) We calculate Aux space complexity only when extra space is used in our program.
+2) When only input collection is used then space complexity is O(1).
