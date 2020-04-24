@@ -69,8 +69,7 @@ def jugglingMethod1(n, d, array):
 
 
 def jugglingMethod2(n, d, array):
-    GCD = gdc(n, d)
-    for i in range(GCD):
+    for i in range(gdc(n, d)):
         temp = array[i]
         j = i
         while True:
