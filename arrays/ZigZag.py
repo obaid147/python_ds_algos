@@ -19,17 +19,24 @@ def method1(arr):
     return arr
 
 
-# def method2(arr, length):
-#     arr.sort()
-#     i = 0:
-#     while i < len(arr) - 1:
-#     i % length !=0
-#
-#     return arr
+# TC O(n) --> SC--> O(1)
+def method2(arr):
+    arr.sort()
+    i = 1
+    while i < len(arr) - 1:
+        if i % 2 != 0:
+            j = i + 1
+            temp = arr[i]
+            arr[i] = arr[j]
+            arr[j] = temp
+            i = i + 1
+        else:
+            i = i + 1
+    return arr
 
 
 if __name__ == '__main__':
     array = [4, 2, 6, 1, 5, 8, 3]
     print('Main Array:- ', array)
-    print('ZigZag Array:', method1(array))
-    # print('Sorted ZigZag Array', method2(array, size, Flag))
+    # print('ZigZag Array:', method1(array))
+    print('Sorted ZigZag Array', method2(array))
