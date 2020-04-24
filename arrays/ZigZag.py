@@ -18,24 +18,25 @@ def method1(arr, length, flag):
 def method2(arr, length, flag):
     arr.sort()
     for i in range(length):
-        x = arr[i]
+        temp = arr[i]
         j = i + 1
         if flag:
             if arr[i] > arr[j]:
                 arr[i] = arr[j]
-                arr[j] = x
+                arr[j] = temp
             flag = False
         else:
             if arr[i] < arr[j]:
                 arr[i] = arr[j]
-                arr[j] = x
+                arr[j] = temp
             flag = True
     return arr
 
 
-array = [4, 2, 6, 1, 5, 8, 3]
-print('Main Array:- ', array)
-size = len(array) - 1
-Flag = True
-# print('ZigZag Array:', method1(array, length, flag))
-print('Sorted ZigZag Array', method1(array, size, Flag))
+if __name__ == '__main__':
+    array = [4, 2, 6, 1, 5, 8, 3]
+    print('Main Array:- ', array)
+    size = len(array) - 1
+    Flag = True
+    # print('ZigZag Array:', method1(array, length, flag))
+    print('Sorted ZigZag Array', method2(array, size, Flag))
