@@ -6,7 +6,7 @@ def method1(arr, number, temp):
         arr.append(rem)
     print('Binary value of', number, 'is')
     for i in reversed(arr):
-        print(i, end=' ')
+        print(i, end='')
 
 
 # Time Complexity -> O(2n) --> O(n)
@@ -27,4 +27,4 @@ if __name__ == '__main__':
     # method1(arr, number, temp)
     method2(arr, number)
     for i in reversed(arr):
-        print(i, end=' ')
+        print(i, end='')
