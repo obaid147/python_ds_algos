@@ -23,8 +23,15 @@ class SinglyLinkedList:
                 for i in range(len//2):
                     temp = temp.next
                 print('Middle Node = ', temp.data)
-
             subMethod1(length)
+
+    def method2(self):
+        slow = self.head
+        fast = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        print(slow.data)
 
 
 ll = SinglyLinkedList()
@@ -39,4 +46,4 @@ second.next = third
 third.next = four
 four.next = five
 five.next = six
-ll.method1()
+ll.method2()
