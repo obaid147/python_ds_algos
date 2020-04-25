@@ -1,11 +1,15 @@
-my_str = 'mada'
-new_str = ""
-for i in my_str:
-    new_str = i + new_str
+s = 'madam'
+flag = True
+j = -1
+size = len(s)
+for i in range(size):
+    if s[i] != s[j]:
+        flag = False
+        break
+    else:
+        j -= 1
 
-print(my_str)
-print(new_str)
-if new_str == my_str:
-    print('palindrome')
+if flag:
+    print('Palindrome')
 else:
-    print("Not Palindrome")
+    print('Not palindrome')
