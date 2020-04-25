@@ -21,7 +21,7 @@ class SinglyLinkedList:
     def __init__(self):
         self.head = None
 
-    def compare(self):
+    def checkPalindrome(self):
         if not self.head:
             return
         stk = Stack()
@@ -44,13 +44,13 @@ class SinglyLinkedList:
 
 ll = SinglyLinkedList()
 ll.head = Node(1)
-second = Node(5)
+second = Node(2)
 third = Node(5)
-four = Node(5)
+four = Node(2)
 five = Node(1)
 ll.head.next = second
 second.next = third
 third.next = four
 four.next = five
 
-print(ll.compare())
+print(ll.checkPalindrome())
