@@ -8,12 +8,20 @@ class SinglyLinkedList:
     def __init__(self):
         self.head = None
 
+    # iterative
+    def method1(self):
+        count = 0
+        while self.head:
+            count = count + 1
+            self.head = self.head.next
+        return count
+
     # recursive
-    def countNodes(self, node):
+    def method2(self, node):
         if not node:
             return 0
         else:
-            return 1 + self.countNodes(node.next)
+            return 1 + self.method2(node.next)
 
 
 ll = SinglyLinkedList()
@@ -22,4 +30,5 @@ second = Node(2)
 third = Node(3)
 ll.head.next = second
 second.next = third
-print(ll.countNodes(ll.head))
+print(ll.method2(ll.head))
+print(ll.method1())
