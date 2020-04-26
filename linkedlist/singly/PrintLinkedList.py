@@ -8,14 +8,15 @@ class SinglyLinkedList:
     def __init__(self):
         self.head = None
 
-    # TC---->O(n)
-    def sizeof(self):
-        count = 0
+    # 0(n)
+    def printList(self):
         temp = self.head
-        while temp is not None:
-            count += 1
-            temp = temp.next
-        print('Size of Linked List = ', count)
+        if not self.head:
+            print("Empty list")
+        else:
+            while temp:
+                print(temp.data, end=' ')
+                temp = temp.next
 
 
 ll = SinglyLinkedList()
@@ -28,4 +29,4 @@ ll.head.next = second
 second.next = third
 third.next = four
 four.next = five
-ll.sizeof()
+ll.printList()
