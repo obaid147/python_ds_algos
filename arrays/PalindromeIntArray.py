@@ -17,6 +17,27 @@ def method1(array):
         print(array, 'is  not Palindrome')
 
 
+def reverse(a):
+    j = a
+    rev = 0
+    while j > 0:
+        rem = j % 10
+        rev = rev * 10 + rem
+        j //= 10
+    return rev
+
+
+def method2(array1):
+    for i in range(len(array1)):
+        if array1[i] != reverse(array1[i]):
+            return False
+        else:
+            continue
+    return True
+
+
 if __name__ == '__main__':
     arr = [1, 2, 3, 4, 2, 1]
-    method1(arr)
+    # method1(arr)
+    array1 = [111, 222, 333, 444, 555]
+    print(method2(array1))

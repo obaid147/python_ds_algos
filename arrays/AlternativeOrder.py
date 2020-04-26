@@ -1,26 +1,11 @@
 array1 = [1, 2, 3, 4, 5]
 array2 = [1, 2, 3, 4]
-
+i = i+2
 for i in range(1, len(array1) + 1):
     if i & 1:
         print(i, end=' ')
 print()
 # =====================================
-
-array1 = [111, 222, 333, 4449, 555]
-
-for i in array1:
-    j = i
-    rev = 0
-    rem = 0
-    while j > 0:
-        rem = j % 10
-        rev = rev * 10 + rem
-        j //= 10
-    if i == rev:
-        continue
-    else:
-        print(0)
 
 
 # ======================================
