@@ -19,7 +19,7 @@ def method1(arr):
     return arr
 
 
-# TC O(nlogn) if MergeSort --> SC--> O(1)
+# If merge sort then TC = O(nlogn) , SC--> O(1)
 def method2(arr):
     arr.sort()
     i = 1
