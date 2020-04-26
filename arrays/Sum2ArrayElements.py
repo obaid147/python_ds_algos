@@ -30,6 +30,6 @@ def Method2(array, arr_size, sum):
 arrayElements2 = [1, 6, 3, 9, 4]
 n = 10
 print(Method1(arrayElements2, n))
-n = 16
+n = 9
 arrayElements1 = [1, 4, 45, 6, 10, 8]
 print(Method2(arrayElements1, len(arrayElements1), n))

@@ -1,7 +1,7 @@
 array1 = [1, 2, 3, 4, 5]
 array2 = [1, 2, 3, 4]
 
-for i in range(len(array1) + 1):
+for i in range(1, len(array1) + 1):
     if i & 1:
         print(i, end=' ')
 print()
@@ -20,7 +20,8 @@ for i in array1:
     if i == rev:
         continue
     else:
-        print(i, 0)
+        print(0)
+
 
 # ======================================
 

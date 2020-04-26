@@ -1,3 +1,29 @@
+def method1(arr, length, flag):
+    a = 0
+    for i in range(length):
+        a += 1
+        if flag:
+            x = arr[i+1]
+            j =i+1
+            if arr[i] > arr[j]:
+                arr[j] = arr[i]
+                arr[i] = x
+            flag = False
+        else:
+            x = arr[i+1]
+            j = i+1
+            if arr[i] < arr[j]:
+                arr[j] = arr[i]
+                arr[i] = x
+            flag = True
+    return arr
+
+
+if __name__ == '__main__':
+    array = [4, 2, 6, 2, 1, 6, 8, 5]
+    size = len(array) - 1
+    flag = True
+    print(method1(array, size, flag))
 # TC O(n) --> SC--> O(1)
 def method1(arr):
     length = len(arr) - 1
