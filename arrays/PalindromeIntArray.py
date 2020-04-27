@@ -27,6 +27,7 @@ def reverse(a):
     return rev
 
 
+# Tc O(n)
 def method2(array1):
     for i in range(len(array1)):
         if array1[i] != reverse(array1[i]):

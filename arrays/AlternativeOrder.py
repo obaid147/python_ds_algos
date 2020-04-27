@@ -1,3 +1,4 @@
+# TC --> O(n)
 def method1(arr):
     for i in range(1, len(arr)+1, 2):
         if i & 1:
