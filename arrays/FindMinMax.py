@@ -31,8 +31,9 @@ def secondMaxMin(arr):
     print('2nd Lowest = ', low)
 
 
-def thirdMaxMin(arr):
-    # ===2nd Highest/lowest======
+def thirdMaxMin():
+    # ===3rd Highest/lowest======
+    arr = [100, 500, 900, 760, 800, 300]
     arr.remove(max(arr))
     arr.remove(max(arr))
     gr8 = arr[0]
@@ -51,7 +52,8 @@ def thirdMaxMin(arr):
 
 
 if __name__ == '__main__':
-    array = [1, 3, 5, 7, 9, 2]
+    array = [100, 500, 900, 760, 800, 300]
+    print(array)
     maxMin(array)
     secondMaxMin(array)
-    # thirdMaxMin(array)
+    thirdMaxMin()
