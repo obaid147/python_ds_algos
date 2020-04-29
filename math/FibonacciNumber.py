@@ -1,10 +1,9 @@
 index = int(input("Enter Index: "))
 
-a, b = 0, 1
-count = 0
+a, b, c = 0, 1, 0
 
-while count < index:
+while c < index:
     a, b = b, a + b
-    count += 1
+    c += 1
 print(a)
 
