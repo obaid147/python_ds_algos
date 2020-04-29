@@ -1,8 +1,14 @@
-def fibNum(n):
-    a, b = 0, 1
-    while a < n:
-        a, b = b, a + b
-    print(a)
+index = int(input("Enter Index: "))
 
+n1, n2 = 0, 1
+count = 0
 
-fibNum(7)
+if index == n1:
+    print(n1)
+elif index == n2:
+    print(n2)
+else:
+    while count < index:
+        n1, n2 = n2, n1+n2
+        count += 1
+    print(n1)
