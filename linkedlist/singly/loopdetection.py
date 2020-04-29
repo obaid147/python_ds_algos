@@ -59,7 +59,7 @@ ll.head.next = second
 second.next = third
 third.next = four
 four.next = five
-#five.next = third
+five.next = third
 # print(ll.CycleDetectionUsingSet())
-# print(ll.CycleDetectionFlyodAlgo())
-print(ll.CycleDetectionTemp())
+print(ll.CycleDetectionFlyodAlgo())
+# print(ll.CycleDetectionTemp())

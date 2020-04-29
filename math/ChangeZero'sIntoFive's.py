@@ -21,6 +21,7 @@ def method2(number):
             newStr = newStr + string[i]
     print(newStr)
 
+
 if __name__ == '__main__':
     number = int(input("Enter a Number: "))
     # method1(number)
