@@ -13,7 +13,7 @@ def Greatest(arr):
     print('Second Greatest = ', secGreatest)
 
 
-def Lowest(arr):
+def Smallest(arr):
     lowest = arr[0]
     for i in arr:
         if i < lowest:
@@ -30,5 +30,8 @@ def Lowest(arr):
 
 if __name__ == '__main__':
     array = [100, 500, 900, 760, 800, 300]
-    Greatest(array)
-    # Lowest(array)
+    inp = int(input("1 for Greatest\n2 for Smallest\n"))
+    if inp == 1:
+        Greatest(array)
+    elif inp == 2:
+        Smallest(array)
