@@ -1,22 +1,23 @@
 # iterative
 def method1():
     n = 123
-    x = 0
+    sum = 0
     while n > 0:
         rem = n % 10
         n //= 10
-        x = x + rem
-    print(x)
+        sum = sum + rem
+    return sum
 
 
 # recursive
-def method2(n, x):
+def method2(n, sum):
     if n > 0:
         rem = n % 10
-        return method2(n//10, x+rem)
+        return method2(n//10, sum+rem)
     else:
-        return x
+        return sum
 
 
 if __name__ == '__main__':
-    print(method2(123, 0))
+    print(method1())
+    print(method2(5231, 0))
