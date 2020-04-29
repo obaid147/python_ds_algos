@@ -11,14 +11,23 @@ class SinglyLinkedList:
     def BreakCycleDetection(self):
         if not self.head:
             return None
-        tut = self.head
-        rab = self.head
-        while rab.next and rab and tut.next:
-            tut = tut.next
-            rab = rab.next.next
-            if id(tut) == id(rab):
-                return True
-        return False
+        set1 = set()
+        temp = self.head
+        flag = False
+        prev = Node(None)
+        while temp:
+            if temp in set1:
+                flag = True
+                break
+            else:
+                set1.add(temp)
+            prev = temp
+            temp = temp.next
+        if flag:
+            prev.next = None
+            return True
+        else:
+            return False
 
 
 ll = SinglyLinkedList()

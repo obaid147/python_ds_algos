@@ -6,4 +6,3 @@ while c < index:
     a, b = b, a + b
     c += 1
 print(a)
-
