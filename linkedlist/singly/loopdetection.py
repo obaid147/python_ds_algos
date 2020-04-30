@@ -21,7 +21,7 @@ class SinglyLinkedList:
         return False
 
     # Time Complexity --> O(n)
-    def CycleDetectionFlyodAlgo(self):
+    def cycleDetectionFlyodAlgo(self):
         if not self.head:
             return None
         tut = self.head
@@ -30,6 +30,9 @@ class SinglyLinkedList:
             tut = tut.next
             rab = rab.next.next
             if id(tut) == id(rab):
+                # find length of loop
+                # println("loop deteected iwth lenght" + leng)
+                # removeLoop(slow, head)
                 return True
         return False
 
@@ -61,5 +64,5 @@ third.next = four
 four.next = five
 five.next = third
 # print(ll.CycleDetectionUsingSet())
-print(ll.CycleDetectionFlyodAlgo())
+print(ll.cycleDetectionFlyodAlgo())
 # print(ll.CycleDetectionTemp())

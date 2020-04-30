@@ -1,8 +1,10 @@
 index = int(input("Enter Index: "))
 
-a, b, c = 0, 1, 0
-
+a = 0
+b = 1
+c = 0
+#TC: O(n)
 while c < index:
-    a, b = b, a + b
+    a, b = b, a+b
     c += 1
 print(a)
