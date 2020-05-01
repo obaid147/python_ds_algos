@@ -13,7 +13,7 @@ def binary_search(arr, num):
     return "Not Found"
 
 
-arr = [1, 10, 5, 6, 7]
+array = [1, 10, 5, 6, 7]
 search = int(input("Enter a number to search: "))
-arr.sort()
-print(binary_search(arr, search))
+array.sort()
+print(binary_search(array, search))
