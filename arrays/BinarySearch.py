@@ -2,7 +2,7 @@ def binary_search(arr, num):
     low = 0
     high = len(arr)-1
 
-    while low <= high:
+    for i in range(low, high):
         mid = low + (high - low) // 2
         if arr[mid] == num:
             return "Found"
@@ -13,8 +13,7 @@ def binary_search(arr, num):
     return "Not Found"
 
 
-arr = [1, 6, -2, 5, 4, 40, 3]
-num = int(input("Enter a number: "))  # 3
+arr = [1, 10, 5, 6, 7]
+search = int(input("Enter a number to search: "))
 arr.sort()
-# [-2, 1, 3, 4, 5, 6, 40]
-print(binary_search(arr, num))
+print(binary_search(arr, search))
