@@ -13,6 +13,11 @@ def binary_search(arr, num):
     return "Not Found"
 
 
+def binary_search_recursive(arr, num):
+    low = 0
+    high = len(arr)-1
+    pass
+
 array = [1, 10, 5, 6, 7]
 search = int(input("Enter a number to search: "))
 array.sort()
