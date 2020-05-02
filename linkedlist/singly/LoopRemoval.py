@@ -22,7 +22,7 @@ class SinglyLinkedList:
             count += 1
         return count
 
-    def method1(self):
+    def usingHashing(self):
         if not self.head:
             return None
 
@@ -38,21 +38,7 @@ class SinglyLinkedList:
             prev = temp
             temp = temp.next
 
-    def removeLoop(self):
-        if not self.head:
-            return None
-        tut = self.head
-        rab = self.head
-        while rab.next and rab and tut.next:
-            temp = tut
-            tut = tut.next
-            rab = rab.next.next
-            if id(tut) == id(rab):
-                temp.next = None
-                return tut
-        return False
-
-    def method2(self):
+    def removeLoopUsingFloydAlgorithm(self):
         if not self.head:
             return None
         tut = self.head
@@ -61,11 +47,11 @@ class SinglyLinkedList:
             tut = tut.next
             rab = rab.next.next
             if id(tut) == id(rab):
-                head = self.head
-                loop = tut
-                self.m2(head, loop)
+                # self.removeLoopUsingFloydsAlgo1(self.head, tut)
+                print("removing loop with length ", self.length())
+                self.removeLoop2(self.head, tut)
 
-    def m2(self, head, loop):
+    def removeLoop1(self, head, loop):
         ptr1 = head
         while 1:
             ptr2 = loop
@@ -76,20 +62,7 @@ class SinglyLinkedList:
             ptr1 = ptr1.next
         ptr2.next = None
 
-    def method3(self):
-        if not self.head:
-            return None
-        tut = self.head
-        rab = self.head
-        while rab.next and rab and tut.next:
-            tut = tut.next
-            rab = rab.next.next
-            if id(tut) == id(rab):
-                head = self.head
-                loop = tut
-                self.m3(head, loop)
-
-    def m3(self, ptr1, ptr2):
+    def removeLoop2(self, ptr1, ptr2):
         while ptr2.next != ptr1.next:
             ptr2 = ptr2.next
             ptr1 = ptr1.next
@@ -109,5 +82,6 @@ four.next = five
 five.next = second
 # ll.method1()
 # ll.method2()
-ll.method3()
+# ll.method3()
+ll.removeLoopUsingFloydAlgorithm()
 ll.print()

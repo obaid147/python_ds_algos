@@ -4,5 +4,10 @@ def fib(n):
     else:
         return fib(n-1) + fib(n-2)
 
+def fiboSeries(till):
+    for i in range(till + 1):
+        print(i , "th : ", fib(i))
 
-print(fib(5))
+till = int(input("Enter till: "))
+
+print(fiboSeries(till))

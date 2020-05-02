@@ -1,4 +1,5 @@
 import sys
+# [2,7,10,6,12]
 
 
 def lowest(arr):
@@ -11,6 +12,7 @@ def lowest(arr):
             second = first
             first = arr[i]
         elif arr[i] < second and arr[i] != first:
+            third = second
             second = arr[i]
         elif arr[i] < third and arr[i] != second:
             third = arr[i]
@@ -28,6 +30,7 @@ def greatest(arr):
             secon = first
             first = arr[i]
         elif arr[i] > secon and arr[i] != first:
+            third = secon
             secon = arr[i]
         elif arr[i] > third and arr[i] != secon:
             third = arr[i]
@@ -35,6 +38,6 @@ def greatest(arr):
     print(first, secon, third)
 
 
-array = [10, -6, -6, 12, 3, -20, 14, 8]
+array = [2,7,10,6,12,1]
 lowest(array)
-greatest(array)
+# greatest(array)

@@ -17,12 +17,12 @@ class SinglyLinkedList:
             tut = tut.next
             rab = rab.next.next
             if id(tut) == id(rab):
-                x = tut
+                ptr1 = tut
                 c = 1
-                tut = tut.next
-                while x != tut:
+                ptr2 = rab
+                while ptr2.next != ptr1:
                     c += 1
-                    tut = tut.next
+                    ptr2 = ptr2.next
                 return c
 
 
