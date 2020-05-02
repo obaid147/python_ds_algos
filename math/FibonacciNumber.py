@@ -1,5 +1,6 @@
 till = int(input("Enter till: "))
-#TC: O(n)
+# TC: O(n)
+
 
 def nthFibo(n):
     a = 0
@@ -10,8 +11,10 @@ def nthFibo(n):
         c += 1
     return a
 
+
 def fiboSeries(till):
     for i in range(till + 1):
         print(i , "th : ", nthFibo(i))
+
 
 fiboSeries(till)
