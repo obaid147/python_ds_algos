@@ -14,9 +14,9 @@ def lowest(arr):
         elif arr[i] < second and arr[i] != first:
             third = second
             second = arr[i]
-        elif arr[i] < third and arr[i] != second:
-            third = arr[i]
 
+        elif arr[i] < third and arr[i] != second and arr[i] != first:
+            third = arr[i]
     print(first, second, third)
 
 
@@ -29,6 +29,7 @@ def greatest(arr):
             third = secon
             secon = first
             first = arr[i]
+
         elif arr[i] > secon and arr[i] != first:
             third = secon
             secon = arr[i]
@@ -38,6 +39,6 @@ def greatest(arr):
     print(first, secon, third)
 
 
-array = [2,7,10,6,12,1]
+array = [1, 5, 6, 4, 3, 1]
 lowest(array)
 # greatest(array)
