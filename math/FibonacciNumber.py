@@ -14,7 +14,7 @@ def nthFibo(n):
 
 def fiboSeries(till):
     for i in range(till + 1):
-        print(i , "th : ", nthFibo(i))
+        print(i, "th : ", nthFibo(i))
 
 
 fiboSeries(till)
