@@ -1,7 +1,7 @@
 def powerOfNumber(cons, inp):
     # res = 2**num
     # print(res)
-    print("2^{} = {}".format(inp, cons**inp))
+    print("2^{} is: {}".format(inp, cons**inp))
 
 
 constant = 2
