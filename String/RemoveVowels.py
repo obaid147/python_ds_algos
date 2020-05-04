@@ -8,5 +8,5 @@ def remove_voewls(string):
 
 
 while True:
-    str1 = input("Enter any string to remove all vowels from it: ")
+    str1 = input("Enter a String: ")
     remove_voewls(str1)
