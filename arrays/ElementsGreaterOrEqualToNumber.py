@@ -6,26 +6,30 @@ def m1(arr, key):
     return count
 
 
-def m2(arr, key):
+def m2(arr, n, key):
     low = 0
-    high = len(arr)
-    count = 0
-    while low < high:
-        mid = low + (high - low) // 2
-        if arr[mid] == key:
-            return high - mid
+    high = n - 1
 
-        if arr[mid] <= key:
+    # Stores the index of the left most element
+    # from the array which is greater than k
+    count = n
+
+    # Finds number of elements greater than k
+    while low <= high:
+        mid = int(low + (high - low) / 2)
+
+        if arr[mid] >= key:
+            count = mid
             high = mid - 1
         else:
-            count = mid + 1
             low = mid + 1
+    count = n - count
     return count
 
 
-# array = [1, 2, 2, 2, 3, 4]  # ip 3, op 5
-array = [1, 2, 3, 4, 5, 6, 7]  # ip 2 op 6
+array = [1, 2, 2, 2, 3, 4]  # ip 3, op 5
+# array = [1, 2, 3, 4, 5, 6, 7]  # ip 2 op 6
 
-n = int(input("Enter a number: "))
+num = int(input("Enter a number: "))
 # print(m1(array, n))
-print(m2(array, n))
+print(m2(array, len(array), num))

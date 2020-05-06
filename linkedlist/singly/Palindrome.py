@@ -80,6 +80,17 @@ class SinglyLinkedList:
 
         return isPalindrome
 
+    # recursive
+    def method3(self, temp2):
+        stk = Stack()
+        if temp2 is None:
+            return 'Palindrome'
+        else:
+            if stk.pop() == temp2.data:
+                return self.method3(temp2.next)
+            else:
+                return 'Not Palindrome'
+
     def print(self):
         temp = self.head
         while temp:
@@ -109,10 +120,24 @@ class SinglyLinkedList:
 
 
 ll = SinglyLinkedList()
-ll.head = Node(1)
-second = Node(2)
+ll.head = Node(11)
+two = Node(2)
+three = Node(3)
+four = Node(2)
+five = Node(1)
 
-ll.head.next = second
+ll.head.next = two
+two.next = three
+three.next = four
+four.next = five
 
-print(ll.method2())
+# print(ll.method2())
 # ll.print()
+stk = Stack()
+temp1 = ll.head
+while temp1:
+    stk.push(temp1.data)
+    temp1 = temp1.next
+print(ll.method3(ll.head))
+
+ll.print()
