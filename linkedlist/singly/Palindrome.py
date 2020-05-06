@@ -22,17 +22,20 @@ class SinglyLinkedList:
         self.head = None
         self.second_half = Node(None)
 
+    def addIntoStack(self):
+        stk = Stack()
+        temp1 = ll.head
+        while temp1:
+            stk.push(temp1.data)
+            temp1 = temp1.next
+
     # TC -> O(n) aux-> O(n)
     def method1(self):
         if not self.head:
             return
+        self.addIntoStack()
+        temp = self.head
         stk = Stack()
-        temp = self.head
-        while temp:
-            stk.push(temp.data)
-            temp = temp.next
-        temp = self.head
-
         while temp.next:
             if stk.pop() != temp.data:
                 return 'Not Palindrome'
@@ -86,10 +89,11 @@ class SinglyLinkedList:
         if temp2 is None:
             return 'Palindrome'
         else:
-            if stk.pop() == temp2.data:
-                return self.method3(temp2.next)
-            else:
+            if stk.pop() != temp2.data:
                 return 'Not Palindrome'
+            else:
+                return self.method3(temp2.next)
+
 
     def print(self):
         temp = self.head
@@ -120,9 +124,9 @@ class SinglyLinkedList:
 
 
 ll = SinglyLinkedList()
-ll.head = Node(11)
+ll.head = Node(1)
 two = Node(2)
-three = Node(3)
+three = Node(322)
 four = Node(2)
 five = Node(1)
 
@@ -132,12 +136,8 @@ three.next = four
 four.next = five
 
 # print(ll.method2())
-# ll.print()
-stk = Stack()
-temp1 = ll.head
-while temp1:
-    stk.push(temp1.data)
-    temp1 = temp1.next
+
+ll.addIntoStack()
 print(ll.method3(ll.head))
 
-ll.print()
+# ll.print()
