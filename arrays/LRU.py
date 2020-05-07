@@ -1,36 +1,37 @@
-class LruStack:
-    size = 5
-    stack = [] * size
+class LRUCache:
+    def __init__(self, capacity, cache):
+        self.capacity = capacity
+        self.cache = cache
 
-    def push(self, data):
-        self.stack.append(data)
+    def get(self, key):
+        if key not in self.cache:  # GOTO put
+            return False
+        self.cache.remove(key)  # remove the key &
+        self.cache.append(key)  # add at last
+        return True
 
-    def pop(self):
-        return self.stack.pop()
+    def put(self, key):
+        if len(self.cache) == self.capacity:
+            self.cache.remove(self.cache[0])
+        self.cache.append(key)
 
-    def peek(self):
-        print(self.stack[-1])
+    def caller(self, key):
+        if not self.get(key):  # if false
+            self.put(key)
 
-    def put(self, data):
-        if len(self.stack) >= self.size:
-            print("Stack is full")
-            return
-        self.push(data)
-        return
-
-    def get(self):
-        self.stack.index()
-        return self.pop()
+    def display(self):
+        for i in self.cache:
+            print(i)
+        # print(self.cache)
 
 
-lru = LruStack()
-
-lru.put(100)
-lru.put(200)
-lru.put(300)
-lru.put(400)
-lru.put(500)
-lru.get()
-lru.put(100)
-
-print(lru.stack)
+size = 3
+cache_memory = []
+lru = LRUCache(size, cache_memory)
+lru.caller(1)
+lru.caller(2)
+lru.caller(3)
+lru.caller(1)
+lru.caller(2)
+lru.caller(5)
+lru.display()
