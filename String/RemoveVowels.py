@@ -1,10 +1,11 @@
 def remove_vowels(string):
     vowels = 'aeiouAEIOU'
+    str1 = ""
     for i in string:
         if i in vowels:
             # string[i] = '' It shows item assignment not possible
-            string = string.replace(i, "")
-    print(string)
+            str1 = str1 + string[i]
+    print(str1)
 
 
 while True:
