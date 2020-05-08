@@ -1,13 +1,12 @@
-def powerOfNumber(var, inp):
-    if inp == 0:
-        return 1
-    if inp == 1:
-        return var
+def powerOfNumber(base, result, exp):
+    if exp == 0:
+        return result
     else:
-        return powerOfNumber(var * base, inp - 1)
+        return powerOfNumber(base, base * result, exp - 1)
 
 
 base = 2
-variable = base
-inputNum = int(input("Enter a number: "))
-print(powerOfNumber(variable, inputNum))
+result = 1
+exp = int(input("Enter a number: "))
+
+print(powerOfNumber(base, result, exp))

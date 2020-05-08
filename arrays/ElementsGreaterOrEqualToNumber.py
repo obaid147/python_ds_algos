@@ -9,21 +9,16 @@ def m1(arr, key):
 def m2(arr, n, key):
     low = 0
     high = n - 1
-
-    # Stores the index of the left most element
-    # from the array which is greater than k
     count = n
 
-    # Finds number of elements greater than k
     while low <= high:
         mid = int(low + (high - low) / 2)
 
         if arr[mid] >= key:
-            count = mid
             high = mid - 1
         else:
+            count = mid + 1
             low = mid + 1
-    count = n - count
     return count
 
 
