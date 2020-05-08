@@ -84,16 +84,8 @@ class SinglyLinkedList:
         return isPalindrome
 
     # recursive
-    def method3(self, temp2):
-        stk = Stack()
-        if temp2 is None:
-            return 'Palindrome'
-        else:
-            if stk.pop() != temp2.data:
-                return 'Not Palindrome'
-            else:
-                return self.method3(temp2.next)
-
+    def method3(self, left, right):
+        pass
 
     def print(self):
         temp = self.head
@@ -136,8 +128,9 @@ three.next = four
 four.next = five
 
 # print(ll.method2())
-
+left = ll.head
+right = ll.head
 ll.addIntoStack()
-print(ll.method3(ll.head))
+print(ll.method3(left, right))
 
 # ll.print()

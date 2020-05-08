@@ -1,5 +1,5 @@
-# towers = [90, 70, 60, 80, 70, 90]
-towers = [12, 100, 40, 60, 120, 90]
+towers = [90, 70, 60, 80, 70, 90]
+# towers = [12, 100, 40, 60, 120, 90]
 newStack = []
 size = len(towers)
 size = -abs(size)
