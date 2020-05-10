@@ -1,4 +1,4 @@
-class Stack:
+class Stack1:
     def __init__(self):
         self.stack = []
         self.tos = -1
@@ -24,13 +24,13 @@ class Stack:
         return len(self.stack)
 
 
-stack = Stack()
-stack.push('A')
-stack.push(2.5)
-stack.push(True)
-stack.push(55)
-
-print("Len: ", stack.sizeStack())
-print("popped ", stack.pop())
-print("Len:", stack.sizeStack())
-stack.peek()
+stack = Stack1()
+# stack.push('A')
+# stack.push(2.5)
+# stack.push(True)
+# stack.push(55)
+#
+# print("Len: ", stack.sizeStack())
+# print("popped ", stack.pop())
+# print("Len:", stack.sizeStack())
+# stack.peek()
