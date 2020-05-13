@@ -12,8 +12,8 @@ class DoublyLinkedList:
     def deleteNode(self, myNode):
         if not self.head or myNode:
             return
-        if not self.head.next:
-            return
+        # if not self.head.next:
+        #     return
 
         if self.head == myNode:
             self.head = myNode.next
@@ -26,32 +26,11 @@ class DoublyLinkedList:
             myNode.prev.next = myNode.next
 
     def deleteByIndex(self, index):
-        i = -1
         temp = self.head
-        while temp:
+        for i in range(index):
             i += 1
             temp = temp.next
-
-        if not self.head:
-            return
-        # if not self.head.next:
-        #     return
-
-        if index == 0:
-            self.head = self.head.next
-            return
-
-        temp = self.head.next
-        for x in range(1, i):
-            if index == x:
-                if temp.next is not None:
-                    temp.next.prev = temp.prev
-
-                if temp.prev is not None:
-                    temp.prev.next = temp.next
-
-
-
+        self.deleteNode(temp)
 
     def print(self):
         temp = self.head

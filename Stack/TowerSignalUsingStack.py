@@ -3,7 +3,9 @@ from Stack.StackUsingArrays import Stack1
 
 class Towers:
     newStack = []
+
     obj = Stack1()
+
     obj.push(12)
     obj.push(100)
     obj.push(40)
