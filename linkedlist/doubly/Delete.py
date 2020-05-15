@@ -28,7 +28,7 @@ class DoublyLinkedList:
     def deleteByIndex(self, index):
         temp = self.head
         for i in range(index):
-            i += 1
+            # i += 1
             temp = temp.next
         self.deleteNode(temp)
 

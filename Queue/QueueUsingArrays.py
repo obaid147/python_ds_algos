@@ -17,7 +17,6 @@ class Queue:
         if self.front == self.rear:
             print("\nQueue is empty\n")
             return
-
         else:
             for i in range(self.rear - 1):
                 self.que[i] = self.que[i + 1]
@@ -25,15 +24,6 @@ class Queue:
             if self.rear < self.capacity:
                 self.que[self.rear] = 0
                 self.rear -= 1
-        return
-
-    def queueDisplay(self):
-        if self.front == self.rear:
-            print("\nQueue is Empty\n")
-            return
-
-        for i in range(self.rear):
-            print(" {} <-- ".format(self.que[i]))
         return
 
     # // print front of queue
@@ -53,21 +43,12 @@ if __name__ == '__main__':
     q.queueEnqueue(40)
     q.queueEnqueue(50)
 
-    # // print Queue elements
-    q.queueDisplay()
-
     # // insert element in the queue
-    q.queueEnqueue(60)
-
-    # // print Queue elements
-    q.queueDisplay()
+    # q.queueEnqueue(60)
 
     q.queueDequeue()
     q.queueDequeue()
-    print("\n\nafter two node deletion\n\n")
-
-    # // print Queue elements
-    q.queueDisplay()
+    print("after two node deletion")
 
     # // print front of the queue
     q.queueFront()
