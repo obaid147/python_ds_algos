@@ -26,27 +26,6 @@ class SinglyLinkedList:
             temp1 = temp1.next
         return
 
-
-    # def sortList(self):
-    #     # Node current will point to head
-    #     current = self.head
-    #
-    #     if self.head is None:
-    #         return
-    #     else:
-    #         while current is not None:
-    #             # Node index will point to node next to current
-    #             index = current.next
-    #
-    #             while index is not None:
-    #                 # If current node's data is greater than index's node data, swap the data between them
-    #                 if current.data > index.data:
-    #                     temp = current.data
-    #                     current.data = index.data
-    #                     index.data = temp
-    #                 index = index.next
-    #             current = current.next
-
     def disp(self):
         temp = self.head
         while temp:
@@ -56,11 +35,11 @@ class SinglyLinkedList:
 
 
 ll = SinglyLinkedList()
-ll.head = Node(1)
+ll.head = Node(2)
 second = Node(2)
-third = Node(3)
+third = Node(2)
 four = Node(2)
-five = Node(3)
+five = Node(2)
 ll.head.next = second
 second.next = third
 third.next = four
