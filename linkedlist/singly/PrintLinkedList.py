@@ -18,6 +18,13 @@ class SinglyLinkedList:
                 print(temp.data, end=' ')
                 temp = temp.next
 
+    # Recursive
+    def printReverse(self, head):
+        if head is None:
+            return
+        self.printReverse(head.next)
+        print(head.data)
+
 
 ll = SinglyLinkedList()
 ll.head = Node(1)
@@ -29,4 +36,5 @@ ll.head.next = second
 second.next = third
 third.next = four
 four.next = five
-ll.printList()
+# ll.printList()
+ll.printReverse(ll.head)
