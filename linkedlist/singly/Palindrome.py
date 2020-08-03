@@ -84,8 +84,16 @@ class SinglyLinkedList:
         return isPalindrome
 
     # recursive
-    def method3(self, left, right):
-        pass
+    def method3(self, right):
+        left = self.head
+        if right.next is None:
+            return True
+        res = self.method3(right.next)
+        if res is False:
+            return False
+        x = left.data == right.data
+        left = left.next
+        return x
 
     def print(self):
         temp = self.head
@@ -128,9 +136,7 @@ three.next = four
 four.next = five
 
 # print(ll.method2())
-left = ll.head
-right = ll.head
-ll.addIntoStack()
-print(ll.method3(left, right))
+# ll.addIntoStack()
+print(ll.method3(ll.head))
 
 # ll.print()

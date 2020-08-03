@@ -6,7 +6,7 @@ class Queue:
 
     def queueEnqueue(self, data):
         if self.capacity == self.rear:
-            print("\nQueue is full\n")
+            print("\nQueue_Progs is full\n")
             return
         else:
             self.que[self.rear] = data
@@ -15,7 +15,7 @@ class Queue:
 
     def queueDequeue(self):
         if self.front == self.rear:
-            print("\nQueue is empty\n")
+            print("\nQueue_Progs is empty\n")
             return
         else:
             for i in range(self.rear - 1):
@@ -29,7 +29,7 @@ class Queue:
     # // print front of queue
     def queueFront(self):
         if self.front == self.rear:
-            print("\nQueue is Empty\n")
+            print("\nQueue_Progs is Empty\n")
             return
 
         print("\nFront Element is: {}".format(self.que[self.front]))

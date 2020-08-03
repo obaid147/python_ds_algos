@@ -25,6 +25,8 @@ class DoublyLinkedList:
         temp = self.head
         for i in range(index):
             temp = temp.next
+        if not temp:
+            return
         print(self.searchByData(temp.data))
 
 
@@ -35,5 +37,5 @@ dll.third = Node(300)
 dll.head.next = dll.sec
 dll.sec.next = dll.third
 
-# print(dll.searchByData(100))
-dll.searchByIndex(0)
+print(dll.searchByData(400))
+# dll.searchByIndex(2)
